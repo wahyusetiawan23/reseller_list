@@ -47,11 +47,7 @@ class Home extends CI_Controller
             $CI3 = $check->id;
             $validate = $this->M_home->reseller_list($CI3);
             if($validate){
-                $countryVAL = $validate->country;
-                if($countryVAL !== 999){
-                    $NC = $check->name;
-                }
-
+                $NC = $check->name;
             }else{
                 $validate = $this->M_home->reseller_list($CI);
             }
