@@ -47,26 +47,25 @@ $assets = base_url('assets/home/');
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="search">
-                            <div class="searchbar">
-                                <div class="searchbar-wrapper">
-									<form id="searchForm">
-										<div class="searchbar-center">
-											<div class="searchbar-input-spacer"></div>
-											<input type="text" class="searchbar-input" id="searchFormValue" name="search" autocapitalize="off"
-												   autocomplete="off" title="Search" role="combobox"
-												   placeholder="Search name">
-										</div>
-										<div class="searchbar-right">
-											<a href="">
-												<iconify-icon class="voice-search" icon="mingcute:search-line" width="22" height="22"></iconify-icon>
-											</a>
-										</div>
-									</form>
-
-                                </div>
-                            </div>
-                        </div>
+<!--                        <form id="searchForm">-->
+<!--                            <div class="search">-->
+<!--                                <div class="searchbar">-->
+<!--                                    <div class="searchbar-wrapper">-->
+<!--                                            <div class="searchbar-center">-->
+<!--                                                <div class="searchbar-input-spacer"></div>-->
+<!--                                                <input type="text" class="searchbar-input" id="searchFormValue" name="search" autocapitalize="off"-->
+<!--                                                       autocomplete="off" title="Search" role="combobox"-->
+<!--                                                       placeholder="Search name">-->
+<!--                                            </div>-->
+<!--                                            <div class="searchbar-right">-->
+<!--                                                <a href="">-->
+<!--                                                    <iconify-icon class="voice-search" icon="mingcute:search-line" width="22" height="22"></iconify-icon>-->
+<!--                                                </a>-->
+<!--                                            </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </form>-->
                     </div>
                 </div>
             </div>
@@ -217,25 +216,25 @@ $assets = base_url('assets/home/');
 			});
 		}
 
-		$('#searchForm').submit(function(e) {
-			e.preventDefault();
-
-			let searchVal = $('#searchFormValue').value;
-			$.ajax({
-				url: base_url + 'Home/search',
-				type: 'post',
-				dataType: 'json',
-				data:{
-					id: bronze,
-					search: searchVal
-				}
-				success: function(response) {
-
-
-					metaResponse(response)
-				}
-			});
-		})
+		// $('#searchForm').submit(function(e) {
+		// 	e.preventDefault();
+        //
+		// 	let searchVal = $('#searchFormValue').value;
+		// 	$.ajax({
+		// 		url: base_url + 'Home/search',
+		// 		type: 'post',
+		// 		dataType: 'json',
+		// 		data:{
+		// 			id: bronze,
+		// 			search: searchVal
+		// 		}
+		// 		success: function(response) {
+        //
+        //
+		// 			metaResponse(response)
+		// 		}
+		// 	});
+		// })
 		$(document).ready(function(){
 			loadingCard(1)
 			listreseller()

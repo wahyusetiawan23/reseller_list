@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/reseller_list/';
+$config['base_url'] = 'http://localhost/BORNEO_NEW/reseller_list/';
 
 /*
 |--------------------------------------------------------------------------
