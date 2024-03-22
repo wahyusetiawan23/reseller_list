@@ -45,16 +45,17 @@ class Home extends CI_Controller
 		$CI = 999;
 		if($check){
             $CI3 = $check->id;
-            $validate = $this->M_home->reseller_list($CI3);
-            if($validate){
-                $NC = $check->name;
-            }else{
-                $validate = $this->M_home->reseller_list($CI);
-            }
-		}else{
-            $validate = $this->M_home->reseller_list($CI);
-        }
 
+            $ResellerById = $this->M_home->resellerById_list($CI3);
+            if($ResellerById){
+                $countryName = $ResellerById->country;
+                if($countryName !== 999){
+                    $NC = $check->name;
+                    $CI = $countryName;
+                }
+            }
+		}
+        $validate = $this->M_home->reseller_list($CI);
 		return [$NC, $validate];
 
 	}

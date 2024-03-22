@@ -11,6 +11,15 @@ class M_home extends CI_Model
 			return $this->db->get()->row();
 		}
 
+        public function resellerById_list($CI)
+        {
+            $this->db->select('*');
+            $this->db->from('reseller');
+            $this->db->where('status', 1);
+            $this->db->where('country', $CI);
+            return $this->db->get()->row();
+        }
+
 		public function reseller_list($CI){
 			$this->db->select('*');
 			$this->db->from('reseller');
