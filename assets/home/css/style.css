@@ -7,7 +7,7 @@
   --color-text-secondary: #6b6b6b;
   --color-text-blue: #34679c;
   --color-icon: #2a507a;
-  --color-blue: #cadbed;
+  --color-blue: #e7eef7;
 }
 a {
   color: unset;
@@ -30,7 +30,7 @@ body {
 
 .header {
   background-color: var(--color-white);
-  padding: 2vw 0px;
+  padding: 1vw 0px;
   box-shadow: 0 4px 8px 0 rgba(52, 103, 156, 0.15);
 }
 
@@ -43,10 +43,10 @@ body {
 }
 
 .content-header .text .title {
-  font-size: clamp(12px, 8vw, 100px);
+  font-size: clamp(12px, 8vw, 80px);
   font-weight: 800;
-  text-shadow: 1px 2px 3px rgba(52, 103, 156, 0.55);
-  max-height: clamp(16px, 10vw, 127px);
+  text-shadow: 1px 2px 4px rgba(52, 103, 156, 0.55);
+  max-height: clamp(16px, 10vw, 100px);
 }
 
 .content-header .text .desc {
@@ -55,7 +55,7 @@ body {
 }
 
 .list-seller {
-  padding: 2vw 0px;
+  padding: 2vw 0px 0.5vw 0px;
 }
 
 .header-list .row {
@@ -64,11 +64,13 @@ body {
 
 .list-seller .country {
   font-size: clamp(12px, 8vw, 32px);
-  display: flex;
-  align-items: center;
+  /* display: flex; */
+  /* align-items: center; */
+  text-align: center;
   gap: 8px;
   font-weight: 600;
   color: var(--color-text-blue);
+  padding: 0em 0 0.3em 0;
 }
 .searchbar {
   font-size: 14px;
@@ -144,13 +146,9 @@ body {
   color: var(--color-text-blue);
 }
 
-.card-list {
-  padding: 2vw 0px;
-}
-
 .card-list .card {
   border: none;
-  box-shadow: 0 2px 4px 0 rgba(52, 103, 156, 0.15);
+  box-shadow: 2px 0px 4px 0 rgba(52, 103, 156, 0.15);
   border-radius: 0.8em;
   display: flex;
   flex-direction: column;
@@ -176,7 +174,24 @@ body {
 .card-list .content-card {
   margin-top: 0.5em;
 }
+.worldwide .header-card {
+  background-color: var(--color-white);
+  color: #2a507a;
+}
 
+.worldwide .content-card {
+  background-color: #e7eef7;
+  box-shadow: inset 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 0.5em 0.7em;
+}
+
+.worldwide .card-footer {
+  background-color: var(--color-white) !important;
+}
+.worldwide .content-card .list-card .dynamic-list {
+  color: #2a507a;
+}
 .content-card .list-card {
   margin-bottom: 0.3em;
 }
@@ -189,7 +204,7 @@ body {
 .content-card .list-card .dynamic-list {
   font-size: clamp(12px, 8vw, 16px);
   font-weight: 600;
-  color: var(--color-text-blue);
+  color: var(--color-text-primary);
 }
 
 .card-list .card-footer {
